@@ -1,0 +1,18 @@
+/*
+Author: D. Asscheman
+Version: 1.0
+*/
+
+.leaflet-div-icon {
+	background: transparent;
+	border: none;
+}
+
+.leaflet-icon-number{
+/* .leaflet-marker-icon .number{ */
+	position: relative;
+	/* top: -43%; */
+	/* font-size: 12px; */
+	/* width: 100%; */
+	text-align: center;
+}

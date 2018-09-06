@@ -1,0 +1,45 @@
+{
+    "name": "2amigos/yii2-leaflet-awesome-plugin",
+    "description": "Yii2 Leaflet plugin to create map icons using Font Awesome Icons.",
+    "keywords": [
+        "2amigos",
+        "yii",
+        "yii2",
+        "yii 2",
+        "extension",
+        "widget",
+        "maps",
+        "leaflet",
+        "plugin",
+        "icon"
+    ],
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Daan Asscheman",
+            "email": "Daan@biologenkantoor.nl",
+            "homepage": "http://biologenkantoor.nl",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "2amigos/yii2-leaflet-extension": "~1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "dasscheman\\leaflet\\icon\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "asset-installer-paths": {
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}
