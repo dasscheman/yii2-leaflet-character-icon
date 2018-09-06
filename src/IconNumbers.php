@@ -1,40 +1,17 @@
 <?php
-namespace dasscheman\leaflet\icon;
+namespace dasscheman\leaflet\IconNumbers;
 
 use yii\web\JsExpression;
 use yii\helpers\Json;
+use dosamigos\leaflet\LeafLet;
 
 class IconNumbers extends Icon
 {
-    /**
-     * @var string the icon name
-     * @see https://github.com/lvoogdt/Leaflet.awesome-markers#properties
-     */
-    public $icon;
 
-    /**
-     * Generates the code to generate a maki marker. Helper method made for speed purposes.
-     *
-     * @param string $icon the icon name
-     * @param array $options the maki marker icon
-     *
-     * @return string the resulting js code
-     */
-    public function make($icon, $options = [])
-    {
-        $options['icon'] = $icon;
-        $options = Json::encode($options);
-        return new JsExpression("L.AwesomeMarkers.icon($options)");
-    }
-
-    /**
-     * Returns the plugin name
-     * @return string
-     */
-    public function getPluginName()
-    {
-        return 'plugin:awesomemarker';
-    }
+   /**
+    * @var string number placed in icon.
+    */
+    public $number;
 
     /**
      * Registers plugin asset bundle
@@ -46,32 +23,44 @@ class IconNumbers extends Icon
      */
     public function registerAssetBundle($view)
     {
-        AwesomeMarkerAsset::register($view);
+        IconNumberAsset::register($view);
         return $this;
     }
 
+
     /**
-     * Returns the javascript ready code for the object to render
-     * @return \yii\web\JsExpression
+     * @return string the js initialization code of the object
      */
     public function encode()
     {
-        $icon = $this->icon;
+        $options = Json::encode($this->getOptions(), LeafLet::JSON_OPTIONS);
 
-        if (empty($icon)) {
-            return "";
+        $js = "L.iconNumbers($options)";
+        if ($this->name) {
+            $js = "var $this->name = $js;";
         }
-        $this->clientOptions['icon'] = $icon;
-        $options = $this->getOptions();
-        $name = $this->getName();
-
-        $js = "L.AwesomeMarkers.icon($options)";
-
-        if (!empty($name)) {
-            $js = "var $name = $js;";
-        }
-
         return new JsExpression($js);
     }
 
+    /**
+     * @return array the configuration options of the array
+     */
+    public function getOptions()
+    {
+        $options = [];
+        $class = new \ReflectionClass(__CLASS__);
+        foreach ($class->getProperties(\ReflectionProperty::IS_PUBLIC) as $property) {
+            if (!$property->isStatic()) {
+                $name = $property->getName();
+                $options[$name] = $this->$name;
+            }
+        }
+        foreach (['iconAnchor', 'iconSize', 'popupAnchor', 'shadowAnchor', 'shadowSize', 'number'] as $property) {
+            $point = $this->$property;
+            if ($point instanceof Point) {
+                $options[$property] = $point->toArray(true);
+            }
+        }
+        return array_filter($options);
+    }
 }

@@ -1,8 +1,7 @@
 {
-    "name": "2amigos/yii2-leaflet-awesome-plugin",
-    "description": "Yii2 Leaflet plugin to create map icons using Font Awesome Icons.",
+    "name": "dasscheman/yii2-leaflet-icon-number",
+    "description": "Yii2 Leaflet extension to add characters to a icon.",
     "keywords": [
-        "2amigos",
         "yii",
         "yii2",
         "yii 2",

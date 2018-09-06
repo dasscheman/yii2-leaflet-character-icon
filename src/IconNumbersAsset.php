@@ -4,7 +4,7 @@
  * @link http://2amigos.us
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
  */
-namespace dosamigos\leaflet\plugins\awesome;
+namespace dasscheman\leaflet\;
 
 use yii\web\AssetBundle;
 
@@ -16,7 +16,7 @@ use yii\web\AssetBundle;
  * @link http://www.2amigos.us/
  * @package dosamigos\leaflet\plugins\awesome
  */
-class AwesomeMarkerAsset extends AssetBundle
+class IconNumberAsset extends AssetBundle
 {
     public $sourcePath = '@vendor/dasscheman/yii2-leaflet-icon-number-plugin/src/assets';
 
