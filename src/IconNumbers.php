@@ -1,11 +1,12 @@
 <?php
-namespace dasscheman\iconnumbers;
+namespace dasscheman\yii2leaflet\icon;
 
 use yii\web\JsExpression;
 use yii\helpers\Json;
 use dosamigos\leaflet\LeafLet;
+use dosamigos\leaflet\types\Icon;
 
-class IconNumbers extends Icon
+class Numbers extends Icon
 {
 
    /**
