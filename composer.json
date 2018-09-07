@@ -30,7 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-            "dasscheman\\leaflet\\iconnumbers\\": "src"
+            "dasscheman\\iconnumbers\\": "src"
         }
     },
     "extra": {

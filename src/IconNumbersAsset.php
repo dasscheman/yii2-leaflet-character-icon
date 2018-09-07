@@ -18,7 +18,7 @@ use yii\web\AssetBundle;
  */
 class IconNumberAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/dasscheman/yii2-leaflet-icon-number-plugin/src/assets';
+    public $sourcePath = '@vendor/dasscheman/yii2-leaflet-icon-number/src/assets';
 
     public $css = ['css/leaflet.icon-numbers.css'];
 

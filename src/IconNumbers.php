@@ -1,5 +1,5 @@
 <?php
-namespace dasscheman\leaflet\IconNumbers;
+namespace dasscheman\iconnumbers;
 
 use yii\web\JsExpression;
 use yii\helpers\Json;
