@@ -1,6 +1,6 @@
 {
-    "name": "dasscheman/yii2-leaflet-icon-number",
-    "description": "Yii2 Leaflet extension to add characters to a icon.",
+    "name": "dasscheman/yii2-leaflet-character-icon",
+    "description": "Yii2 Leaflet plugin to create map icons using Font Awesome Icons.",
     "keywords": [
         "yii",
         "yii2",
@@ -30,7 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-            "dasscheman\\yii2leaflet\\icon\\": "src"
+            "dasscheman\\leaflet\\charactericon\\": "src"
         }
     },
     "extra": {

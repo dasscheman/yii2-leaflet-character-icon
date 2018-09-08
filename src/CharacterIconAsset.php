@@ -4,7 +4,7 @@
  * @link http://2amigos.us
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
  */
-namespace dasscheman\yii2leaflet\icon;
+namespace dasscheman\leaflet\charactericon;
 
 use yii\web\AssetBundle;
 
@@ -16,11 +16,11 @@ use yii\web\AssetBundle;
  * @link http://www.2amigos.us/
  * @package dosamigos\leaflet\plugins\awesome
  */
-class NumberAsset extends AssetBundle
+class CharacterIconAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/dasscheman/yii2-leaflet-icon-number/src/assets';
+    public $sourcePath = '@vendor/dasscheman/yii2-leaflet-character-icon/src/assets';
 
-    public $css = ['css/leaflet.icon-numbers.css'];
+    public $css = ['css/leaflet.character-icon.css'];
 
     public $depends = [
         'dosamigos\leaflet\LeafLetAsset',
@@ -28,6 +28,6 @@ class NumberAsset extends AssetBundle
 
     public function init()
     {
-        $this->js[] = 'js/leaflet.icon-numbers.js';
+        $this->js[] = 'js/leaflet.character-icon.js';
     }
 }
