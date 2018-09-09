@@ -1,11 +1,8 @@
 <?php
 /**
- * @copyright Copyright (c) 2013-2015 2amigOS! Consulting Group LLC
- * @link http://2amigos.us
  * @license http://www.opensource.org/licenses/bsd-license.php New BSD License
  */
 namespace dasscheman\leaflet\charactericon;
-
 
 // use dosamigos\leaflet\Plugin;
 use dosamigos\leaflet\LeafLet;
@@ -14,29 +11,16 @@ use yii\web\JsExpression;
 use yii\helpers\Json;
 
 /**
- * AwesomeMarker allows to create map icons using FontAwesome Icons.
  *
- * Font awesome files are required to be installed
- *
- * @see https://github.com/lvoogdt/Leaflet.awesome-markers
- * @author Antonio Ramirez <amigo.cobos@gmail.com>
- * @link http://www.ramirezcobos.com/
- * @link http://www.2amigos.us/
- * @package dosamigos\leaflet\plugins\awesome
+ * @see https://github.com/dasscheman/yii2-leaflet-character-icon
+ * @package dosamigos\leaflet\charactericon
  */
 class CharacterIcon extends Icon
 {
-
-       /**
-        * @var string number placed in icon.
-        */
-        public $number;
-
-    /**
-     * @var string the icon name
-     * @see https://github.com/lvoogdt/Leaflet.awesome-markers#properties
-     */
-    //public $icon;
+   /**
+    * @var string number placed in icon.
+    */
+    public $number;
 
     /**
      * Generates the code to generate a maki marker. Helper method made for speed purposes.

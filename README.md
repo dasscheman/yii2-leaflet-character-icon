@@ -1,1 +1,1 @@
-Adding a number to an icon
+Adding a character to an icon
